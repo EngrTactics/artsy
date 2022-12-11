@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "Clash";
+    src: url(/src/fonts/FontsFree-Net-ClashDisplay-Variable.ttf)
+      format("truetype");
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url(/src/fonts/satoshi/Satoshi-Regular.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Stix";
+    src: url(/src/fonts/STIXTwoText-Medium.ttf);
+  }
 }
