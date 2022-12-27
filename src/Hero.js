@@ -3,7 +3,7 @@ import HeroImages from "./HeroImage";
 const Hero = () => {
   return (
     <section id="Hero">
-      <div className="container mx-auto px-3.5 md:px-24">
+      <div className="container mx-auto px-5 md:px-24">
         <h1 className="leading-relaxed text-2xl text-center font-clash md:text-6xl md:leading-[5rem]">
           Photography is poetry and beautiful untold stories
         </h1>

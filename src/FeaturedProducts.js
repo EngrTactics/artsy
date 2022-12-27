@@ -1,9 +1,17 @@
 import FeaturedProduct from "./FeaturedProduct";
+import featuredProductData from "./FeaturedProductsData";
 
 const FeaturedProducts = () => {
   return (
-    <div className="w-full py-5">
-      <FeaturedProduct></FeaturedProduct>
+    <div className="max-full py-5">
+      {featuredProductData.map((items) => (
+        <FeaturedProduct
+          key={items.id}
+          description={items.description}
+          title={items.name}
+          url={items.img}
+        ></FeaturedProduct>
+      ))}
     </div>
   );
 };

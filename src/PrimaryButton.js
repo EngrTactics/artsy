@@ -1,12 +1,12 @@
 import { RxArrowRight } from "react-icons/rx";
 
-const PrimaryButton = ({ position }) => {
+const PrimaryButton = ({ custom, arrow }) => {
   return (
     <a
       href="#"
-      className={`p-3 inline-block w-auto h-auto border-white border-2 rounded-full ${position}`}
+      className={`p-3 inline-block w-auto h-auto border-2 rounded-full ${custom}`}
     >
-      <RxArrowRight></RxArrowRight>
+      <RxArrowRight className={`${arrow}`}></RxArrowRight>
     </a>
   );
 };

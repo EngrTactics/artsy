@@ -3,8 +3,8 @@ import FeaturedProducts from "./FeaturedProducts";
 const Featured = () => {
   return (
     <section id="featured">
-      <div className="px-5 container md:mx-20 md:my-5">
-        <h1 className="text-3xl md:text-3xl md:my-10 md:mt-32">
+      <div className="mx-auto container md:px-5 md:my-5 md:mx-auto">
+        <h1 className="text-3xl ml-10 md:text-3xl md:mt-32">
           Featured Products
         </h1>
 

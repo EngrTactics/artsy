@@ -1,0 +1,25 @@
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+        <div className="h-32 w-28 bg-black shrink-0"></div>
+
+          const [slide, setSlide] = useState(document.getElementsByClassName("slide"));
+  const slider = Array.from(slide);
+  const handleCLick = () => {
+    slider[0].scrollBy({
+      left: -100,
+    });
+  };
+
+          <MdOutlineArrowBackIosNew
+          onClick={scrollLeft}
+          size={30}
+          className="absolute top-1/2 left-5 -translate-x-0 -translate-y-1/2 z-10 "
+        ></MdOutlineArrowBackIosNew>
+        <MdOutlineArrowForwardIos
+          onClick={scrollRight}
+          size={30}
+          className="absolute top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10"
+        ></MdOutlineArrowForwardIos>
