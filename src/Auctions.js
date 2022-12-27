@@ -41,13 +41,13 @@ const Auctions = () => {
         </div>
         <MdOutlineArrowBackIosNew
           onClick={scrollRight}
-          size={30}
-          className="absolute top-1/2 left-5 -translate-x-0 -translate-y-1/2 z-10 "
+          size={15}
+          className="absolute p-3 top-1/2 left-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 rounded-full shadow-lg text-white "
         ></MdOutlineArrowBackIosNew>
         <MdOutlineArrowForwardIos
           onClick={scrollLeft}
-          size={30}
-          className="absolute top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10"
+          size={15}
+          className="absolute p-3 top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 text-white rounded-full shadow-xl"
         ></MdOutlineArrowForwardIos>
       </div>
       <h1 className="text-xl my-5">Top bids from popular Creators</h1>

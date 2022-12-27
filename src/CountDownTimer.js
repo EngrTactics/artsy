@@ -17,7 +17,7 @@ const CountdownTimer = () => {
     setTimeLeft(newTime);
   }, 1000);
   return (
-    <div className="bg-white min-w-full opacity-50 p-5 rounded-xl">
+    <div className="bg-white min-w-full opacity-50 p-5 rounded-xl border-white border-[1px]">
       {`${timeLeft.hr}hr: ${timeLeft.min}min: ${timeLeft.sec}sec`}
     </div>
   );
