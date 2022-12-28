@@ -3,10 +3,10 @@ import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
-import Auction from "./Auction";
-import TopBids from "./TopBids";
+import AuctionCard from "../components/AuctionCard";
+import TopBids from "../components/TopBids";
 
-const Auctions = () => {
+const Auction = () => {
   const [slide, setSlide] = useState(null);
   useEffect(() => {
     setSlide(document.getElementById("slide"));
@@ -23,31 +23,31 @@ const Auctions = () => {
     });
   };
   return (
-    <div className="auctions container px-5">
+    <div className="auctions container px-5 m-auto">
       <h1 className="text-xl mb-5">
         Here's an overview of products actively on auctions, explore!
       </h1>
-      <div className="relative h-52 rounded-xl overflow-hidden">
+      <div className="relative h-72 rounded-xl overflow-hidden md:my-10">
         <div
           id="slide"
-          className="slide flex h-52 justify-start overflow-x-scroll overflow-y-hidden scrollbar-hide relative scroll-smooth"
+          className="slide flex h-72 justify-start overflow-x-scroll overflow-y-hidden scrollbar-hide relative scroll-smooth"
         >
-          <Auction></Auction>
-          <Auction></Auction>
-          <Auction></Auction>
-          <Auction></Auction>
-          <Auction></Auction>
-          <Auction></Auction>
+          <AuctionCard></AuctionCard>
+          <AuctionCard></AuctionCard>
+          <AuctionCard></AuctionCard>
+          <AuctionCard></AuctionCard>
+          <AuctionCard></AuctionCard>
+          <AuctionCard></AuctionCard>
         </div>
         <MdOutlineArrowBackIosNew
           onClick={scrollRight}
           size={15}
-          className="absolute p-3 top-1/2 left-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 rounded-full shadow-lg text-white "
+          className="absolute h-10 w-10 p-3 top-1/2 left-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 rounded-full shadow-xl text-white cursor-pointer"
         ></MdOutlineArrowBackIosNew>
         <MdOutlineArrowForwardIos
           onClick={scrollLeft}
           size={15}
-          className="absolute p-3 top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 text-white rounded-full shadow-xl"
+          className="absolute h-10 w-10 p-3 top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 text-white rounded-full shadow-xl cursor-pointer"
         ></MdOutlineArrowForwardIos>
       </div>
       <h1 className="text-xl my-5">Top bids from popular Creators</h1>
@@ -57,4 +57,4 @@ const Auctions = () => {
   );
 };
 
-export default Auctions;
+export default Auction;

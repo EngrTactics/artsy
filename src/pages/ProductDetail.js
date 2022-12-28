@@ -1,8 +1,8 @@
 import { FaHeart } from "react-icons/fa";
 import { SlArrowDown } from "react-icons/sl";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import productData from "./ProductData";
-import Slider from "./Slider";
+import productData from "../data/ProductData";
+import Slider from "../components/Slider";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 

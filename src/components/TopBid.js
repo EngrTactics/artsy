@@ -1,9 +1,9 @@
 import { FaHeart } from "react-icons/fa";
-import leaf from "./images/leaf.jpg";
+import leaf from "../images/leaf.jpg";
 
 const TopBid = () => {
   return (
-    <div className="flex flex-col w-full h-[29rem] space-y-5">
+    <div className="flex flex-col w-full h-[29rem] space-y-5 md:h-[32rem] ">
       <div className="flex flex-col items-end px-5 py-2 rounded-xl w-full h-full space-y-3 shadow-[0_0_10px_4px_rgba(0,0,0,0.1)]">
         <FaHeart></FaHeart>
         <div
@@ -26,7 +26,7 @@ const TopBid = () => {
           <h2>Current bid</h2>
           <h2 className="uppercase">0.987 eth</h2>
         </div>
-        <button className="px-10 py-3 bg-blue-700 w-auto rounded-md">
+        <button className="px-10 py-3 bg-blue-600 w-auto rounded-md">
           Place bid
         </button>
       </div>

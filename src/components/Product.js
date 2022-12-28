@@ -1,5 +1,3 @@
-import girl from "./images/girl.jpg";
-
 const Product = ({ title, img, price }) => {
   return (
     <div className="product mb-10">

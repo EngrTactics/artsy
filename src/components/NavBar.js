@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaRegBell, FaBars } from "react-icons/fa";
-import { MobileNavContext } from "./MobileNavContext";
+import { MobileNavContext } from "../contexts/MobileNavContext";
 
 import { Link } from "react-router-dom";
 import NavLinksMobile from "./NavLinksMobile";
@@ -11,7 +11,7 @@ const NavBar = () => {
     setIsOpen(true);
   };
   return (
-    <nav className=" w-full container mx-auto p-6">
+    <nav className=" w-full container mx-auto p-5 relative">
       {/* flex container */}
       <div className="flex item-center justify-between relative">
         {/* Hamburgar icon */}

@@ -1,4 +1,4 @@
-import FeaturedProducts from "./FeaturedProducts";
+import FeaturedProducts from "./FeaturedProductList";
 
 const Featured = () => {
   return (

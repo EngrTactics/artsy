@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useContext } from "react";
-import { MobileNavContext } from "./MobileNavContext";
+import { MobileNavContext } from "../contexts/MobileNavContext";
 import { motion } from "framer-motion";
 
 const NavLinksMobile = ({ open }) => {

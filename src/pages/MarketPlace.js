@@ -1,11 +1,11 @@
 import { SlArrowDown } from "react-icons/sl";
 import { Link } from "react-router-dom";
-import FilterPanel from "./FilterPanel";
-import Footer from "./Footer";
-import Product from "./Product";
-import productData from "./ProductData";
+import FilterPanel from "../components/FilterPanel";
+import Footer from "../components/Footer";
+import Product from "../components/Product";
+import productData from "../data/ProductData";
 
-const Products = () => {
+const MarketPlace = () => {
   return (
     <div className="products">
       <div className=" w-full px-5 m-auto md:m-0 md:p-10">
@@ -39,4 +39,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default MarketPlace;

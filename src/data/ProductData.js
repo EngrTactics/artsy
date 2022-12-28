@@ -1,9 +1,9 @@
-import lady from "./images/lady.jpg";
-import raceLadies from "./images/raceLadies.jpg";
-import girlFlower from "./images/girlFlower.png";
-import standGuy from "./images/standGuy.jpg";
-import egypt1 from "./images/egypt1.jpg";
-import egypt2 from "./images/egypt2.jpg";
+import lady from "../images/lady.jpg";
+import raceLadies from "../images/raceLadies.jpg";
+import girlFlower from "../images/girlFlower.png";
+import standGuy from "../images/standGuy.jpg";
+import egypt1 from "../images/egypt1.jpg";
+import egypt2 from "../images/egypt2.jpg";
 
 const productData = [
   {
