@@ -7,7 +7,7 @@ const AuctionCard = () => {
       style={{ backgroundImage: `url(${girl})` }}
       className="relative p-8 h-full bg-cover bg-center w-60 bg-black rounded-xl shrink-0 mr-5 flex items-end justify-center md:w-96"
     >
-      <CountdownTimer className=""></CountdownTimer>
+      <CountdownTimer></CountdownTimer>
     </div>
   );
 };

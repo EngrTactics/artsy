@@ -4,7 +4,7 @@ const Drops = () => {
   return (
     <div className="container mx-auto px-5">
       <div className="text-center px-10">
-        <h1 className="text-3xl mb-10">Upcoming Drops</h1>
+        <h1 className="text-3xl font-bold mb-10">Upcoming Drops</h1>
         <p className="mb-5">
           Turn on the notification so that no drops will miss you
         </p>

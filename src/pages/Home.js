@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import Upcoming from "../components/Upcoming";
 import Links from "../components/Links";
-import TopCreators from "../component/TopCreators";
+import TopCreators from "../components/TopCreators";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 

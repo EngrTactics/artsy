@@ -1,4 +1,4 @@
-import lady from "./images/lady.jpg";
+import lady from "../images/lady.jpg";
 
 const UpcomingCard = () => {
   return (

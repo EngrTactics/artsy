@@ -11,7 +11,7 @@ const TopBid = () => {
           className="rounded-xl w-full h-4/5 bg-cover bg-center"
         />
         <div className="w-full flex justify-between text-xl">
-          <h1>Out of the Box</h1>
+          <h1 className="font-bold">Out of the Box</h1>
           <h1 className="uppercase">0.57 eth</h1>
         </div>
       </div>

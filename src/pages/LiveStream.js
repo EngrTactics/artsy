@@ -1,8 +1,13 @@
 import { FaEye, FaHeart } from "react-icons/fa";
 import girl from "../images/girl.jpg";
 import { AiOutlineClose, AiOutlineSend } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const LiveStream = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/auctions");
+  };
   return (
     <div className="relative">
       {/* Product being bidded: Image */}
@@ -24,11 +29,12 @@ const LiveStream = () => {
             <AiOutlineClose
               className="cursor-pointer"
               size={25}
+              onClick={handleClick}
             ></AiOutlineClose>
           </div>
         </div>
         {/* Current Bid */}
-        <h1 className="text-3xl">Current Bid : $45.00</h1>
+        <h1 className="text-3xl font-bold">Current Bid : $45.00</h1>
 
         {/* comment and Like section */}
         <div className="flex justify-between items-center space-x-5 w-full">

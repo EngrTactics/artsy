@@ -50,7 +50,7 @@ const Auction = () => {
           className="absolute h-10 w-10 p-3 top-1/2 right-5 -translate-x-0 -translate-y-1/2 z-10 bg-white bg-opacity-30 text-white rounded-full shadow-xl cursor-pointer"
         ></MdOutlineArrowForwardIos>
       </div>
-      <h1 className="text-xl my-5">Top bids from popular Creators</h1>
+      <h1 className="text-xl my-5 font-bold">Top bids from popular Creators</h1>
 
       <TopBids></TopBids>
     </div>

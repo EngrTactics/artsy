@@ -12,6 +12,11 @@
     src: url(/src/fonts/satoshi/Satoshi-Regular.otf) format("opentype");
   }
   @font-face {
+    font-family: "Satoshi";
+    src: url(/src/fonts/satoshi/Satoshi-Bold.otf) format("opentype");
+    font-weight: bold;
+  }
+  @font-face {
     font-family: "Stix";
     src: url(/src/fonts/STIXTwoText-Medium.ttf);
   }
