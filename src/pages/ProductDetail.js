@@ -64,7 +64,7 @@ const ProductDetail = () => {
               <button onClick={increaseQuantity}>+</button>
             </div>
             <div className="flex space-x-5">
-              <buttton className="bg-blue-500 text-white rounded-md px-10 py-3 cursor-pointer">
+              <buttton className="bg-[#3341C1] hover:bg-[#051076] text-white rounded-md px-10 py-3 cursor-pointer">
                 Add to cart
               </buttton>
               <button className="p-3 border-black border-[1px] rounded-md">

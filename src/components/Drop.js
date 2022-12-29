@@ -1,7 +1,7 @@
 import DropCountdownTimer from "./DropCountdownTimer";
 import girl from "../images/girl.jpg";
 
-const Drop = () => {
+const Drop = ({ title, date, desc, creator }) => {
   return (
     <div className="flex flex-col space-y-5 items-start md:flex-row md:space-y-0 md:justify-between md:space-x-10">
       <div
@@ -18,15 +18,11 @@ const Drop = () => {
         <div className="bg-blue-500 px-5 py-2 uppercase rounded-md text-sm hidden md:block">
           Upcoming
         </div>
-        <p>November 21 at 11am WAT</p>
-        <h1 className="text-3xl">Eyo: Eko for show</h1>
-        <p className="text-sm leading-loose">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-          ipsum laborum recusandae fugiat ratione officiis in quibusdam deleniti
-          quas illum!
-        </p>
+        <p>{date}</p>
+        <h1 className="text-3xl">{title}</h1>
+        <p className="text-sm leading-loose">{desc}</p>
         <h2 className="text-2xl">
-          Creator: <span className="text-blue-500">Jacob Banks</span>
+          Creator: <span className="text-blue-500 capitalize">{creator}</span>
         </h2>
         <button className="border-b-[1px] border-b-blue-500 text-blue-500">
           Get Notified
