@@ -1,3 +1,8 @@
+import creator1 from "../images/frownGuy.png";
+import creator2 from "../images/smallGuy.png";
+import creator3 from "../images/lady2.png";
+import { motion } from "framer-motion";
+
 const TopCreators = () => {
   return (
     <section
@@ -24,6 +29,51 @@ const TopCreators = () => {
       <h1 className="text-8xl absolute right-0 bottom-0 line-through md:bottom-10 md:right-10">
         1985
       </h1>
+      {/* top creators images and animations */}
+      <div className="absolute bottom-0 right-0">
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 3,
+            repeatType: "mirror",
+            repeat: Infinity,
+            repeatDelay: 6,
+          }}
+          src={creator1}
+          alt=""
+        />
+      </div>
+      <div className="absolute bottom-0 right-0">
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 3,
+            duration: 3,
+            repeatType: "mirror",
+            repeat: Infinity,
+          }}
+          src={creator2}
+          alt=""
+        />
+      </div>
+      <div className="absolute bottom-0 right-0">
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 6,
+            duration: 3,
+            repeatType: "mirror",
+            repeat: Infinity,
+            repeatDelay: 9,
+          }}
+          src={creator3}
+          alt=""
+        />
+      </div>
     </section>
   );
 };
