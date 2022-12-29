@@ -1,4 +1,5 @@
 import { FaEnvelope, FaLocationArrow } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,10 +9,26 @@ const Footer = () => {
       </div>
 
       <ul className="link hidden md:h-full md:flex md:flex-col md:justify-between">
-        <li>Home</li>
-        <li>Marketplace</li>
-        <li>Auctions</li>
-        <li>Drops</li>
+        <li>
+          <Link className="hover:text-blue-600" to="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link className="hover:text-blue-600" to="/marketplace">
+            Marketplace
+          </Link>
+        </li>
+        <li>
+          <Link className="hover:text-blue-600" to="/auctions">
+            Auctions
+          </Link>
+        </li>
+        <li>
+          <Link className="hover:text-blue-600" to="/drop">
+            Drops
+          </Link>
+        </li>
       </ul>
 
       <ul className="link hidden md:flex md:h-full md:flex-col md:justify-between">

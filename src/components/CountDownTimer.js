@@ -1,8 +1,13 @@
 import { useState } from "react";
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ thr, tmin, tsec }) => {
   var totalSeconds, newTime, hrs, mins, secs;
-  const [timeLeft, setTimeLeft] = useState({ hr: 6, min: 40, sec: 15 });
+  const [timeLeft, setTimeLeft] = useState({
+    hr: thr,
+    min: tmin,
+    sec: tsec,
+  });
+
   totalSeconds = timeLeft.hr * 3600 + timeLeft.min * 60 + timeLeft.sec;
   setInterval(() => {
     totalSeconds--;

@@ -5,6 +5,7 @@ import {
 } from "react-icons/md";
 import AuctionCard from "../components/AuctionCard";
 import TopBids from "../components/TopBids";
+import auctionsData from "../data/AuctionsData";
 
 const Auction = () => {
   const [slide, setSlide] = useState(null);
@@ -32,12 +33,15 @@ const Auction = () => {
           id="slide"
           className="slide flex h-72 justify-start overflow-x-scroll overflow-y-hidden scrollbar-hide relative scroll-smooth"
         >
-          <AuctionCard></AuctionCard>
-          <AuctionCard></AuctionCard>
-          <AuctionCard></AuctionCard>
-          <AuctionCard></AuctionCard>
-          <AuctionCard></AuctionCard>
-          <AuctionCard></AuctionCard>
+          {auctionsData.products.map((product) => (
+            <AuctionCard
+              key={product.id}
+              url={product.url}
+              hr={product.time.hr}
+              min={product.time.min}
+              sec={product.time.sec}
+            ></AuctionCard>
+          ))}
         </div>
         <MdOutlineArrowBackIosNew
           onClick={scrollRight}
