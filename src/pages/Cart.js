@@ -14,6 +14,9 @@ const Cart = () => {
   const handleCheckout = () => {
     setTabIndex(1);
   };
+  const handleToPayment = () => {
+    setTabIndex(2n);
+  };
 
   let content;
   if (cartData.length === 0) {
@@ -52,7 +55,7 @@ const Cart = () => {
       </TabList>
       <TabPanel className=" h-full rounded-md ">{content}</TabPanel>
       <TabPanel className="h-full rounded-md  ">
-        <ShippingDetails></ShippingDetails>
+        <ShippingDetails handleToPayment={handleToPayment}></ShippingDetails>
       </TabPanel>
       <TabPanel className="h-full rounded-md  ">
         <Pay></Pay>

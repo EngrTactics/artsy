@@ -5,6 +5,7 @@ import {
 } from "react-icons/md";
 import AuctionCard from "../components/AuctionCard";
 import TopBids from "../components/TopBids";
+import Footer from "../components/Footer"
 import auctionsData from "../data/AuctionsData";
 
 const Auction = () => {
@@ -57,6 +58,8 @@ const Auction = () => {
       <h1 className="text-xl my-5 font-bold">Top bids from popular Creators</h1>
 
       <TopBids></TopBids>
+      <Footer></Footer>
+
     </div>
   );
 };

@@ -70,7 +70,7 @@ const ProductDetail = () => {
           <img className="md:hidden" src={targetData.img} alt="" />
           <div
             style={{ backgroundImage: `url(${targetData.img})` }}
-            className="hidden md:block md:h-full md:bg-center md:bg-no-repeat md:bg-contain"
+            className="hidden md:block md:h-full md:bg-center md:bg-no-repeat md:bg-cover"
           ></div>
         </div>
         <div className="details flex flex-col md:border-[1px] md:border-l-0 md:border-black md:m-0">

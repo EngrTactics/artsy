@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import CartList from "../components/CartList";
 
-const ShippingDetails = () => {
+const ShippingDetails = ({handleToPayment}) => {
   const [country, setCountry] = useState("");
   const handleSelect = (e) => {
     setCountry(e.target.value);
@@ -71,7 +71,7 @@ const ShippingDetails = () => {
           label="Phone Number"
           fullWidth
         ></TextField>
-        <button className="mx-auto bg-[#3341C1] hover:bg-[#051076] text-white rounded-md px-10 py-3 cursor-pointer">
+        <button onClick={handleToPayment} className="mx-auto bg-[#3341C1] hover:bg-[#051076] text-white rounded-md px-10 py-3 cursor-pointer">
           Proceed to payment
         </button>
 
