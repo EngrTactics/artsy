@@ -20,7 +20,7 @@ const Slider = ({ data }) => {
     setCurrentSlide(newIndex);
   };
   return (
-    <div className="group w-full h-[400px] p-5 flex-col border-black border-[1px] items-end">
+    <div className="group w-full h-[400px] p-5 flex-col border-black border-[1px] items-end md:hidden">
       <div className="flex w-full justify-end my-2">
         <FaHeart></FaHeart>
       </div>

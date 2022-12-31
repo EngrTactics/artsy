@@ -8,7 +8,8 @@ import {
   Slider,
   ThemeProvider,
 } from "@mui/material";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { FilterContext } from "../contexts/FilterContext";
 import { FiFilter } from "react-icons/fi";
 import { SlArrowDown } from "react-icons/sl";
 
@@ -20,6 +21,13 @@ const theme = createTheme({
 
 const FilterPanel = () => {
   const [value, setValue] = useState([0, 0]);
+  const {
+    isFilterOpen,
+    setIsFilterOpen,
+    selectedValue,
+    setSelectedValue,
+    filterProduct,
+  } = useContext(FilterContext);
   const handleChange = (e, newValue, activeThumb) => {
     activeThumb = 10;
     setValue(newValue);
@@ -30,34 +38,74 @@ const FilterPanel = () => {
         <FiFilter></FiFilter>
         <h1>Filter</h1>
       </div>
-      <Accordion>
+      <Accordion elevation={0}>
         <AccordionSummary expandIcon={<SlArrowDown></SlArrowDown>}>
           By Category
         </AccordionSummary>
         <AccordionDetails>
           <FormControlLabel
-            control={<Checkbox />}
+            control={
+              <Checkbox
+                onChange={(e) => {
+                  filterProduct(e, "editorial");
+                }}
+                value="editorial"
+                checked={selectedValue === "editorial"}
+              />
+            }
             label="Editorials"
           ></FormControlLabel>
           <FormControlLabel
-            control={<Checkbox />}
+            control={
+              <Checkbox
+                onChange={(e) => {
+                  filterProduct(e, "fashion");
+                }}
+                value="fashion"
+                checked={selectedValue === "fashion"}
+              />
+            }
             label="Fashion"
           ></FormControlLabel>
           <FormControlLabel
-            control={<Checkbox />}
+            control={
+              <Checkbox
+                onChange={(e) => {
+                  filterProduct(e, "optics");
+                }}
+                value="optics"
+                checked={selectedValue === "optics"}
+              />
+            }
             label="Optics"
           ></FormControlLabel>
           <FormControlLabel
-            control={<Checkbox />}
+            control={
+              <Checkbox
+                onChange={(e) => {
+                  filterProduct(e, "art");
+                }}
+                value="art"
+                checked={selectedValue === "art"}
+              />
+            }
             label="Art & Museum"
           ></FormControlLabel>
           <FormControlLabel
-            control={<Checkbox />}
+            control={
+              <Checkbox
+                onChange={(e) => {
+                  filterProduct(e, "nature");
+                }}
+                value="nature"
+                checked={selectedValue === "nature"}
+              />
+            }
             label="Nature"
           ></FormControlLabel>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion elevation={0}>
         <AccordionSummary expandIcon={<SlArrowDown></SlArrowDown>}>
           By Price
         </AccordionSummary>

@@ -10,6 +10,7 @@ const DropList = () => {
           date={drop.date}
           desc={drop.desc}
           title={drop.title}
+          url={drop.url}
         ></Drop>
       ))}
     </div>

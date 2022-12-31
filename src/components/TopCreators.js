@@ -53,6 +53,7 @@ const TopCreators = () => {
             delay: 3,
             duration: 3,
             repeatType: "mirror",
+            repeatDelay: 6,
             repeat: Infinity,
           }}
           src={creator2}
@@ -68,7 +69,7 @@ const TopCreators = () => {
             duration: 3,
             repeatType: "mirror",
             repeat: Infinity,
-            repeatDelay: 9,
+            repeatDelay: 6,
           }}
           src={creator3}
           alt=""

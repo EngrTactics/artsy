@@ -1,0 +1,9 @@
+.react-tabs__tab--selected {
+  border-bottom: 2px solid black;
+  color: black;
+  outline: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}

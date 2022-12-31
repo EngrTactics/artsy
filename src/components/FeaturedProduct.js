@@ -10,7 +10,7 @@ const FeaturedProduct = ({ url, title, description }) => {
     <div className="my-5 mx-10 flex flex-col md:border-t-2 md:border-black-500  md:flex-row md:even:flex-row-reverse md:pt-10 md:pb-6 md:justify-between">
       <div className="left flex md:w-1/2 md:mr-10">
         <div
-          className="featured-img relative  h-[240px] w-[368px] bg-gray-600 bg-blend-overlay bg-center text-white text-center pt-10 text-4xl font-clash"
+          className="featured-img relative  h-[240px] w-[368px] bg-gray-200 bg-blend-overlay bg-center text-white text-center pt-10 text-4xl font-clash md:bg-transparent"
           style={{ backgroundImage: `url(${url}) ` }}
         >
           <h1 className="md:hidden">{title}</h1>
