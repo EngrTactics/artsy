@@ -1,4 +1,3 @@
-import { FaHeart } from "react-icons/fa";
 import { SlArrowDown } from "react-icons/sl";
 import {
   Accordion,
@@ -102,8 +101,10 @@ const ProductDetail = () => {
               </button>
               <button className="p-2 border-black border-[1px] rounded-md">
                 <Checkbox
-                  checkedIcon={<AiFillHeart size={20}></AiFillHeart>}
-                  icon={<AiOutlineHeart size={20}></AiOutlineHeart>}
+                  checkedIcon={
+                    <AiFillHeart color="red" size={20}></AiFillHeart>
+                  }
+                  icon={<AiOutlineHeart color="red" size={20}></AiOutlineHeart>}
                 ></Checkbox>
               </button>
             </div>
@@ -157,24 +158,27 @@ const ProductDetail = () => {
         })}
       ></Slider>
       <ScrollSlider>
-        {productData.map((product) => {
-          <div className="w-full h-[400px] p-5 flex-col border-black border-[1px] items-end ">
+        {productData.map((product) => (
+          <div className="w-1/3 h-full p-5 flex-col flex-shrink-0 border-black border-[1px] items-end ">
             <div className="flex w-full justify-end my-2">
-              <FaHeart></FaHeart>
+              <Checkbox
+                checkedIcon={<AiFillHeart color="red" size={20}></AiFillHeart>}
+                icon={<AiOutlineHeart color="red" size={20}></AiOutlineHeart>}
+              ></Checkbox>
             </div>
 
             <div
               style={{ backgroundImage: `url(${product.img})` }}
-              className="img-container w-full h-64 bg-cover bg-center"
+              className="img-container w-full  h-[180px] bg-cover bg-center"
             >
-              <div className="flex justify-between h-full items-center"></div>
+              <div className="flex justify-between  items-center"></div>
             </div>
             <div className="flex mt-5 justify-between mb-5 ">
               <h6 className="uppercase">{product.name}</h6>
               <h6>${product.price}</h6>
             </div>
-          </div>;
-        })}
+          </div>
+        ))}
       </ScrollSlider>
     </div>
   );

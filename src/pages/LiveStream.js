@@ -1,15 +1,61 @@
 import { FaEye, FaHeart } from "react-icons/fa";
 import girl from "../images/girl.jpg";
-import { AiOutlineClose, AiOutlineSend } from "react-icons/ai";
+import { AiOutlineClose, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { Checkbox } from "@mui/material";
+import { FiSend } from "react-icons/fi";
+import avatar1 from "../images/avatar1.png";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Comment from "../components/Comment";
+import commentsData from "../data/CommentsData";
 
 const LiveStream = () => {
+  const [commentBox, setCommentBox] = useState(null);
+  const [sendButton, setSendButton] = useState(null);
+  const [commentBoxD, setCommentBoxD] = useState(null);
+  const [sendButtonD, setSendButtonD] = useState(null);
+  const [comments, setComments] = useState(commentsData);
+  useEffect(() => {
+    setCommentBox(document.getElementById("commentBox"));
+    setSendButton(document.getElementById("sendButton"));
+    setCommentBoxD(document.getElementById("commentBoxD"));
+    setSendButtonD(document.getElementById("sendButtonD"));
+  }, []);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/auctions");
+    navigate("/drop");
+  };
+  const AddComment = (commentToAdd) => {
+    setComments((previousComments) => {
+      return previousComments.concat(commentToAdd);
+    });
+  };
+  const sendComment = () => {
+    AddComment({
+      id: comments.length + 1,
+      comment: commentBox.value,
+      name: "Tray Foster",
+      img: avatar1,
+    });
+    commentBox.value = "";
+  };
+
+  const AddCommentD = (commentToAdd) => {
+    setComments((previousComments) => {
+      return previousComments.concat(commentToAdd);
+    });
+  };
+  const sendCommentD = () => {
+    AddComment({
+      id: comments.length + 1,
+      comment: commentBoxD.value,
+      name: "Tray Foster",
+      img: avatar1,
+    });
+    commentBoxD.value = "";
   };
   return (
-    <div className="relative mx-auto container md:p-10 md:flex ">
+    <div className="relative mx-auto container md:p-10 md:flex">
       {/* Product being bidded: Image */}
       <div
         style={{ backgroundImage: `url(${girl})` }}
@@ -37,22 +83,80 @@ const LiveStream = () => {
         <h1 className="text-3xl font-bold w-full text-center">
           Current Bid : $45.00
         </h1>
-        {/* comment and Like section */}
+        {/* Comments */}
+        <div className="absolute bottom-20 left-5 flex flex-col space-y-6  justify-end w-1/2 h-1/3 overflow-hidden text-white md:hidden">
+          {comments.map((comment) => (
+            <Comment
+              key={comment.id}
+              img={comment.img}
+              name={comment.name}
+              message={comment.comment}
+            ></Comment>
+          ))}
+        </div>
+        {/* write comment and Like section */}
         <div className="flex justify-between items-center space-x-5 w-full md:hidden">
-          <form className=" w-full flex items-center border-white border-2 rounded-full px-5 py-3">
+          <div className=" w-full flex items-center border-white border-2 rounded-full px-5 py-3">
             <input
+              autoCapitalize="false"
+              id="commentBoxD"
               type="text"
               className="bg-transparent w-full focus:border-none focus:outline-none"
+              onKeyDown={(e) => {
+                if (e.key == "enter") {
+                  sendButtonD.click();
+                }
+              }}
             />
-            <AiOutlineSend></AiOutlineSend>
-          </form>
+            <button id="sendButtonD" onClick={sendCommentD}>
+              <FiSend></FiSend>
+            </button>
+          </div>
           {/* Love icon */}
-          <FaHeart size={30}></FaHeart>
+          <Checkbox
+            checkedIcon={<AiFillHeart color="red" size={30}></AiFillHeart>}
+            icon={<AiOutlineHeart color="red" size={30}></AiOutlineHeart>}
+          ></Checkbox>
         </div>
         <h1 className="hidden md:block">Tag: Lost or Winter</h1>
       </div>
       {/* comment section for desktop view */}
-      <div className=" hidden md:p-5 md:block md:justify-self-start md:border-y-[1.5px] border-black min-w-[400px] border-r-[1.5px]"></div>
+      <div className="hidden md:flex flex-col justify-end md:p-5 md:justify-self-start md:border-y-[1.5px] border-black min-w-[400px] border-r-[1.5px] space-y-5">
+        {/* Comments */}
+        <div className="flex flex-col space-y-6 text-gray-700 justify-end w-full  max-h-[33.5rem] overflow-hidden ">
+          {comments.map((comment) => (
+            <Comment
+              key={comment.id}
+              img={comment.img}
+              name={comment.name}
+              message={comment.comment}
+            ></Comment>
+          ))}
+        </div>
+        <div className="hidden md:flex justify-between items-center space-x-5 w-full">
+          <div className=" w-full flex items-center border-black border-2 rounded-full px-5 py-3">
+            <input
+              autoCapitalize="false"
+              id="commentBox"
+              type="text"
+              className="bg-transparent w-full focus:border-none focus:outline-none"
+              onKeyDown={(e) => {
+                if (e.key == "enter") {
+                  sendButton();
+                }
+              }}
+            />
+            <button id="sendButton" onClick={sendComment}>
+              <FiSend></FiSend>
+            </button>
+          </div>
+          {/* Love icon */}
+          <Checkbox
+            checkedIcon={<AiFillHeart color="red" size={30}></AiFillHeart>}
+            icon={<AiOutlineHeart color="red" size={30}></AiOutlineHeart>}
+          ></Checkbox>
+        </div>
+      </div>
     </div>
   );
 };

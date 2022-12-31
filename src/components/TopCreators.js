@@ -35,8 +35,8 @@ const TopCreators = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 0,
-            duration: 3,
+            delay: 3,
+            duration: 1,
             repeatType: "mirror",
             repeat: Infinity,
             repeatDelay: 6,
@@ -50,7 +50,7 @@ const TopCreators = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 3,
+            delay: 6,
             duration: 3,
             repeatType: "mirror",
             repeatDelay: 6,
@@ -65,7 +65,7 @@ const TopCreators = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 6,
+            delay: 9,
             duration: 3,
             repeatType: "mirror",
             repeat: Infinity,

@@ -7,9 +7,14 @@ import {
   FormControl,
   MenuItem,
 } from "@mui/material";
+import { useState } from "react";
 import CartList from "../components/CartList";
 
 const ShippingDetails = () => {
+  const [country, setCountry] = useState("");
+  const handleSelect = (e) => {
+    setCountry(e.target.value);
+  };
   return (
     <div className="flex container px-5">
       <form action="" className="py-5 flex flex-col space-y-5 w-full">
@@ -51,7 +56,7 @@ const ShippingDetails = () => {
         </FormControl>
         <FormControl>
           <InputLabel>Country</InputLabel>
-          <Select label="Country">
+          <Select label="Country" onSelect={handleSelect} value={country}>
             <MenuItem>Netherlands</MenuItem>
             <MenuItem>Abuja</MenuItem>
             <MenuItem>South Africa</MenuItem>

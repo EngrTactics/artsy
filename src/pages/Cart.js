@@ -2,25 +2,22 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CartList from "../components/CartList";
 import { CartContext } from "../contexts/CartContext";
 import { useContext, useState } from "react";
-
 import ShippingDetails from "../components/ShippingDetails";
 import "../react-tab-cart.css";
+import Pay from "../components/Pay";
+import NoItemCart from "../components/NoItemCart";
 
 const Cart = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const { cartData } = useContext(CartContext);
-  // const checkout = useRef(null);
-  // useEffect(() => {
-  //   setTab(document.getElementById("tab"));
-  //   console.log(tab);
-  // }, []);
+
   const handleCheckout = () => {
     setTabIndex(1);
   };
 
   let content;
   if (cartData.length === 0) {
-    content = <div>nothing here yet</div>;
+    content = <NoItemCart />;
   } else {
     content = (
       <CartList>
@@ -33,13 +30,6 @@ const Cart = () => {
       </CartList>
     );
   }
-
-  // const [checkOut, setCheckOut] = useState(null);
-  // let checkout;
-  // useEffect(() => {
-  //   setCheckOut(document.getElementsByClassName("checkout"));
-  //   checkout = checkOut.ToArray();
-  // }, []);
 
   return (
     <Tabs
@@ -64,7 +54,9 @@ const Cart = () => {
       <TabPanel className="h-full rounded-md  ">
         <ShippingDetails></ShippingDetails>
       </TabPanel>
-      <TabPanel className="h-full rounded-md  ">Payment Details</TabPanel>
+      <TabPanel className="h-full rounded-md  ">
+        <Pay></Pay>
+      </TabPanel>
     </Tabs>
   );
 };

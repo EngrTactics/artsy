@@ -1,11 +1,15 @@
-import { FaHeart } from "react-icons/fa";
-import leaf from "../images/leaf.jpg";
+import { Checkbox } from "@mui/material";
+
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const TopBid = ({ url, creator, name, highest, current, day, month, year }) => {
   return (
     <div className="flex flex-col w-full h-[29rem] space-y-5 md:h-[32rem] ">
       <div className="flex flex-col items-end px-5 py-2 rounded-xl w-full h-full space-y-3 shadow-[0_0_10px_4px_rgba(0,0,0,0.1)]">
-        <FaHeart></FaHeart>
+        <Checkbox
+          checkedIcon={<AiFillHeart color="red" size={20}></AiFillHeart>}
+          icon={<AiOutlineHeart color="red" size={20}></AiOutlineHeart>}
+        ></Checkbox>
         <div
           style={{ backgroundImage: `url(${url})` }}
           className="rounded-xl w-full h-4/5 bg-cover bg-center"

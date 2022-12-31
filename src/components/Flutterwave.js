@@ -1,57 +1,50 @@
-import React from "react";
 import {
   useFlutterwave,
   FlutterWaveButton,
   closePaymentModal,
 } from "flutterwave-react-v3";
+import icon from "../images/artsy_favicon.png";
 
-export default function App() {
+export default function App({ amountx }) {
   const config = {
-    public_key: "FLWPUBK_TEST-08acfb7b98dd266ab691a78e3d61f69a-X",
+    public_key: "FLWPUBK_TEST-5ea2b80ca78e6a9922ed8a8fc64a5d18-X",
+
     tx_ref: Date.now(),
-    amount: 100,
-    currency: "NGN",
-    payment_options: "card,mobilemoney,ussd",
+    currency: "USD",
+    amount: amountx,
+    payment_options: "card,mobilemoney",
     customer: {
-      email: "user@gmail.com",
-      phone_number: "070********",
-      name: "john doe",
+      email: "herveralive@gmail.com",
+      phonenumber: "+250786007267",
+      name: "Herve Nkurikiyimfura",
     },
+
     customizations: {
-      title: "my Payment Title",
+      title: "Artsy",
       description: "Payment for items in cart",
-      logo: "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
+      logo: icon,
     },
   };
 
   const handleFlutterPayment = useFlutterwave(config);
-  const fwConfig = {
-    ...config,
-    text: "Pay with fluter",
-    callback: (response) => {
-      closePaymentModal();
-    },
-    onClose: () => {
-      console.log("jjj");
-    },
-  };
 
   return (
     <div className="App">
-      <h1>Hello Test user</h1>
-
       <button
+        className="mx-auto bg-[#3341C1] hover:bg-[#051076] text-white rounded-md px-10 py-3 cursor-pointer"
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
               console.log(response);
-              closePaymentModal(); // this will close the modal programmatically
+              closePaymentModal();
             },
-            onClose: () => {},
+            onClose: () => {
+              console.log("You close me ooo");
+            },
           });
         }}
       >
-        Payment with React hooks
+        Proceed with FlutterWave
       </button>
     </div>
   );

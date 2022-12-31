@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { FaSearch, FaShoppingCart, FaRegBell, FaBars } from "react-icons/fa";
+import { FaSearch, FaRegBell, FaBars } from "react-icons/fa";
 import { MobileNavContext } from "../contexts/MobileNavContext";
 import { Link, useLocation } from "react-router-dom";
 import NavLinksMobile from "./NavLinksMobile";

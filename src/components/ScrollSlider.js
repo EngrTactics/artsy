@@ -21,10 +21,10 @@ const ScrollSlider = ({ children }) => {
     });
   };
   return (
-    <div className="relative hidden h-72 rounded-xl overflow-hidden md:my-10 md:block">
+    <div className="relative hidden h-[310px] overflow-hidden md:my-10 md:block">
       <div
         id="scroll-slide"
-        className="flex h-72 justify-start overflow-x-scroll overflow-y-hidden scrollbar-hide relative scroll-smooth"
+        className="flex space-x-5 h-[310px] justify-start overflow-x-scroll overflow-y-hidden scrollbar-hide relative scroll-smooth"
       >
         {children}
       </div>

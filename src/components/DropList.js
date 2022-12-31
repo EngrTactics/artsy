@@ -11,6 +11,7 @@ const DropList = () => {
           desc={drop.desc}
           title={drop.title}
           url={drop.url}
+          status={drop.status}
         ></Drop>
       ))}
     </div>
