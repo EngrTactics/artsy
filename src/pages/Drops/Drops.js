@@ -1,4 +1,5 @@
 import DropList from "./DropList";
+import Footer from "../../components/Footer";
 
 const Drops = () => {
   return (

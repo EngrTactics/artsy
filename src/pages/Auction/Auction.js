@@ -6,7 +6,7 @@ import {
 import AuctionCard from "./AuctionCard";
 import TopBids from "./TopBids";
 import auctionsData from "../../data/AuctionsData";
-
+import Footer from "../../components/Footer";
 const Auction = () => {
   const [slide, setSlide] = useState(null);
   useEffect(() => {
@@ -58,10 +58,6 @@ const Auction = () => {
 
       <TopBids></TopBids>
       <Footer></Footer>
-<<<<<<< HEAD:src/pages/Auction/Auction.js
-=======
-
->>>>>>> 9fae8c7c8008f36f5832a627cfeae7b6d345cd05:src/pages/Auction.js
     </div>
   );
 };

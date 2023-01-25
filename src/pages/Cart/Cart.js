@@ -15,7 +15,7 @@ const Cart = () => {
     setTabIndex(1);
   };
   const handleToPayment = () => {
-    setTabIndex(2n);
+    setTabIndex(2);
   };
 
   let content;

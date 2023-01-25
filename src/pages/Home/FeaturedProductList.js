@@ -3,7 +3,7 @@ import featuredProductData from "../../data/FeaturedProductsData";
 
 const FeaturedProducts = () => {
   return (
-    <div className="max-full py-5">
+    <div className="py-5">
       {featuredProductData.map((items) => (
         <FeaturedProduct
           key={items.id}
