@@ -3,9 +3,9 @@ import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
-import AuctionCard from "../components/AuctionCard";
-import TopBids from "../components/TopBids";
-import auctionsData from "../data/AuctionsData";
+import AuctionCard from "./AuctionCard";
+import TopBids from "./TopBids";
+import auctionsData from "../../data/AuctionsData";
 
 const Auction = () => {
   const [slide, setSlide] = useState(null);

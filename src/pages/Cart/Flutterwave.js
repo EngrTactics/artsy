@@ -3,7 +3,7 @@ import {
   FlutterWaveButton,
   closePaymentModal,
 } from "flutterwave-react-v3";
-import icon from "../images/artsy_favicon.png";
+import icon from "../../images/artsy_favicon.png";
 
 export default function App({ amountx }) {
   const config = {

@@ -1,6 +1,6 @@
-import creator1 from "../images/frownGuy.png";
-import creator2 from "../images/smallGuy.png";
-import creator3 from "../images/lady2.png";
+import creator1 from "../../images/frownGuy.png";
+import creator2 from "../../images/smallGuy.png";
+import creator3 from "../../images/lady2.png";
 import { motion } from "framer-motion";
 
 const TopCreators = () => {

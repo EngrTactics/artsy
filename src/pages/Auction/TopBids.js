@@ -1,5 +1,5 @@
 import TopBid from "./TopBid";
-import auctionsData from "../data/AuctionsData";
+import auctionsData from "../../data/AuctionsData";
 
 const TopBids = () => {
   return (

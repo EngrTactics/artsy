@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { CartContext } from "../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
 import { useContext } from "react";
 
 const CartCard = ({ data }) => {

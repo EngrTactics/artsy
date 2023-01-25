@@ -1,4 +1,4 @@
-import avatar3 from "../images/avatar3.png";
+import avatar3 from "../../images/avatar3.png";
 
 const Comment = ({ img, name, message }) => {
   return (

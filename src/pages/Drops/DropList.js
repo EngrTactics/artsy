@@ -1,4 +1,4 @@
-import dropsData from "../data/DropsData";
+import dropsData from "../../data/DropsData";
 import Drop from "./Drop";
 const DropList = () => {
   return (

@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar";
-import MarketPlace from "../pages/MarketPlace";
-import Home from "../pages/Home";
-import Auction from "../pages/Auction";
-import Drops from "../pages/Drops";
-import ProductDetail from "../pages/ProductDetail";
-import LiveStream from "../pages/LiveStream";
-import Cart from "../pages/Cart";
+import MarketPlace from "../pages/MarketPlace/MarketPlace";
+import Home from "../pages/Home/Home";
+import Auction from "../pages/Auction/Auction";
+import Drops from "../pages/Drops/Drops";
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
+import LiveStream from "../pages/LiveStream/LiveStream";
+import Cart from "../pages/Cart/Cart";
 import { CartContext } from "../contexts/CartContext";
 import { useState, useEffect } from "react";
 

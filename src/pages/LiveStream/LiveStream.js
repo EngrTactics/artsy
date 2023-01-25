@@ -1,13 +1,13 @@
 import { FaEye, FaHeart } from "react-icons/fa";
-import girl from "../images/girl.jpg";
+import girl from "../../images/girl.jpg";
 import { AiOutlineClose, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Checkbox } from "@mui/material";
 import { FiSend } from "react-icons/fi";
-import avatar1 from "../images/avatar1.png";
+import avatar1 from "../../images/avatar1.png";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Comment from "../components/Comment";
-import commentsData from "../data/CommentsData";
+import Comment from "./Comment";
+import commentsData from "../../data/CommentsData";
 
 const LiveStream = () => {
   const [commentBox, setCommentBox] = useState(null);

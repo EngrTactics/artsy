@@ -1,11 +1,11 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import CartList from "../components/CartList";
-import { CartContext } from "../contexts/CartContext";
+import CartList from "./CartList";
+import { CartContext } from "../../contexts/CartContext";
 import { useContext, useState } from "react";
-import ShippingDetails from "../components/ShippingDetails";
-import "../react-tab-cart.css";
-import Pay from "../components/Pay";
-import NoItemCart from "../components/NoItemCart";
+import ShippingDetails from "./ShippingDetails";
+import "./react-tab-cart.css";
+import Pay from "./Pay";
+import NoItemCart from "./NoItemCart";
 
 const Cart = () => {
   const [tabIndex, setTabIndex] = useState(0);

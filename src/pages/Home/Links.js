@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PrimaryButton from "./PrimaryButton";
+import PrimaryButton from "../../components/PrimaryButton";
 
 const Links = () => {
   return (

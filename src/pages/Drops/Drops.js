@@ -1,4 +1,4 @@
-import DropList from "../components/DropList";
+import DropList from "./DropList";
 
 const Drops = () => {
   return (

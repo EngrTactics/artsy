@@ -1,5 +1,4 @@
 import DropCountdownTimer from "./DropCountdownTimer";
-import girl from "../images/girl.jpg";
 import { Link } from "react-router-dom";
 
 const Drop = ({ url, title, date, desc, creator, status }) => {

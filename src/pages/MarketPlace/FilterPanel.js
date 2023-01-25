@@ -9,7 +9,7 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import { useState, useContext } from "react";
-import { FilterContext } from "../contexts/FilterContext";
+import { FilterContext } from "../../contexts/FilterContext";
 import { FiFilter } from "react-icons/fi";
 import { SlArrowDown } from "react-icons/sl";
 

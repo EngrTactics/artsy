@@ -5,12 +5,12 @@ import {
   AccordionDetails,
   Checkbox,
 } from "@mui/material";
-import productData from "../data/ProductData";
-import Slider from "../components/Slider";
+import productData from "../../data/ProductData";
+import Slider from "./Slider";
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-import ScrollSlider from "../components/ScrollSlider";
-import { CartContext } from "../contexts/CartContext";
+import ScrollSlider from "./ScrollSlider";
+import { CartContext } from "../../contexts/CartContext";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const ProductDetail = () => {

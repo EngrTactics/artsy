@@ -1,5 +1,4 @@
-import lady from "../images/lady.jpg";
-import { UpcomingContext } from "../contexts/UpcomingContext";
+import { UpcomingContext } from "../../contexts/UpcomingContext";
 import { useContext } from "react";
 
 const UpcomingCard = ({ data }) => {

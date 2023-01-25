@@ -1,5 +1,4 @@
 import CountdownTimer from "./CountDownTimer";
-import girl from "../images/girl.jpg";
 
 const AuctionCard = ({ url, hr, min, sec }) => {
   return (

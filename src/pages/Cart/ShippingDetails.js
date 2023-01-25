@@ -8,7 +8,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import { useState } from "react";
-import CartList from "../components/CartList";
+import CartList from "./CartList";
 
 const ShippingDetails = () => {
   const [country, setCountry] = useState("");

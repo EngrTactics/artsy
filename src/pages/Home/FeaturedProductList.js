@@ -1,5 +1,5 @@
 import FeaturedProduct from "./FeaturedProduct";
-import featuredProductData from "../data/FeaturedProductsData";
+import featuredProductData from "../../data/FeaturedProductsData";
 
 const FeaturedProducts = () => {
   return (

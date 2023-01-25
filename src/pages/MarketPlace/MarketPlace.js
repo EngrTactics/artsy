@@ -1,10 +1,10 @@
 import { SlArrowDown } from "react-icons/sl";
 import { Link } from "react-router-dom";
-import FilterPanel from "../components/FilterPanel";
-import Footer from "../components/Footer";
-import Product from "../components/Product";
-import productData from "../data/ProductData";
-import { FilterContext } from "../contexts/FilterContext";
+import FilterPanel from "./FilterPanel";
+import Footer from "../../components/Footer";
+import Product from "./Product";
+import productData from "../../data/ProductData";
+import { FilterContext } from "../../contexts/FilterContext";
 
 import { FormControlLabel, Checkbox } from "@mui/material";
 import { useState } from "react";

@@ -1,6 +1,6 @@
 import UpcomingCard from "./UpcomingCard";
-import UpcomingData from "../data/UpcomingData";
-import { UpcomingContext } from "../contexts/UpcomingContext";
+import UpcomingData from "../../data/UpcomingData";
+import { UpcomingContext } from "../../contexts/UpcomingContext";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
