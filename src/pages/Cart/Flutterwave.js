@@ -8,7 +8,7 @@ import icon from "../../images/artsy_favicon.png";
 export default function App({ amountx }) {
   const config = {
     public_key: "FLWPUBK_TEST-5ea2b80ca78e6a9922ed8a8fc64a5d18-X",
-
+ redirect_url:"../pages/home",
     tx_ref: Date.now(),
     currency: "USD",
     amount: amountx,

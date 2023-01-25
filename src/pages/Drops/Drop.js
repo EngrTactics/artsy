@@ -8,9 +8,19 @@ const Drop = ({ url, title, date, desc, creator, status }) => {
         style={{ backgroundImage: `url(${url})` }}
         className="p-5 w-full h-56 rounded-md flex flex-col transition-all duration-[2000ms] ease-in-out items-end bg-cover bg-no-repeat bg-center text-white justify-between md:h-72 md:min-w-[26rem] md:justify-end hover:bg-[length:150%]"
       >
-        <div className="bg-blue-500 px-5 py-2 uppercase rounded-md text-sm md:hidden">
-          Upcoming
-        </div>
+         {status === "Live" ? (
+          <Link
+            to="/auctions/livebid"
+            className="bg-green-500 px-5 py-2 uppercase rounded-md text-sm  md:hidden"
+          >
+            {status}
+          </Link>
+        ) : (
+          <button className="bg-blue-500 px-5 py-2 uppercase rounded-md text-sm  md:hidden">
+            {status}
+          </button>
+        )}
+
         <DropCountdownTimer></DropCountdownTimer>
       </div>
 

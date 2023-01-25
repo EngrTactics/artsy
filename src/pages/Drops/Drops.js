@@ -15,6 +15,7 @@ const Drops = () => {
       <div className="flex flex-col">
         <DropList></DropList>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -57,6 +57,7 @@ const Auction = () => {
       <h1 className="text-xl my-5 font-bold">Top bids from popular Creators</h1>
 
       <TopBids></TopBids>
+      <Footer></Footer>
     </div>
   );
 };
