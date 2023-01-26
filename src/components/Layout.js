@@ -43,7 +43,7 @@ const Layout = () => {
 
   return (
     <div className="layout">
-      <Router basename="/artsy">
+      <Router>
         <CartContext.Provider value={context}>
           <NavBar></NavBar>
           <ScrollToTop>
