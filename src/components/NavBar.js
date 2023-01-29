@@ -17,18 +17,20 @@ const NavBar = () => {
   return (
     <nav
       className={`${
-        location.pathname === "/auctions/livebid" ? "hidden" : null
+        location.pathname === "/auctions/livebid" ? "hidden" : ""
       } w-full container mx-auto p-5 relative`}
     >
-      {/* flex container */}
-      <div className="flex item-center justify-between relative">
+      {/* nav container */}
+      <div className="h-full flex item-center justify-between relative">
         {/* Hamburgar icon */}
         <div onClick={handleClick} className="flex items-center md:hidden">
           <FaBars></FaBars>
         </div>
         {/* logo */}
-        <div className="text-2xl font-serif font-stix md:static">ARTSY.</div>
-        {/* menu items : in className, there is a check to see if we are currently on the page the link links to so that we ca set a border show active link  */}
+        <div className="h-full text-2xl flex font-stix my-auto md:static">
+          ARTSY.
+        </div>
+        {/* menu items : in className, there is a check to see if we are currently on the page the link links to so that we can set a border show active link  */}
         <div className="hidden space-x-6 md:flex">
           <Link
             className={`py-1 transition-all ${
@@ -71,20 +73,26 @@ const NavBar = () => {
             Drop
           </Link>
         </div>
+        {/* context to pass down isOpen to mobile link */}
         <MobileNavContext.Provider value={{ isOpen, setIsOpen }}>
           {isOpen && <NavLinksMobile></NavLinksMobile>}
         </MobileNavContext.Provider>
         {/* menu icons */}
         <div className="flex space-x-6 items-center">
+          {/* search icon */}
           <FaSearch></FaSearch>
+          {/* cart icon for cart and checkout page */}
           <Link className="relative" to={"/cart"}>
             {cartData.length !== 0 && (
+              // indicator that there is a item in the cart along with the number of item in cart
               <div className="absolute -top-1 -right-1 w-3 h-3 text-white text-[6px] bg-red-500 text-center my-auto rounded-full">
                 {cartData.length}
               </div>
             )}
+            {/* link icon */}
             <MdOutlineShoppingCart size={20}></MdOutlineShoppingCart>
           </Link>
+          {/* Notification icon */}
           <FaRegBell className="hidden md:block"></FaRegBell>
         </div>
       </div>
