@@ -1,14 +1,16 @@
-import FeaturedProducts from "./FeaturedProductList";
+import FeaturedProductList from "./FeaturedProductList";
 
 const Featured = () => {
   return (
+    // Feautured Seection
     <section id="featured">
       <div className="mx-auto container md:px-5 md:my-5">
+        {/* Title */}
         <h1 className="text-3xl ml-10 md:text-3xl md:mt-32">
           Featured Products
         </h1>
-
-        <FeaturedProducts></FeaturedProducts>
+        {/* Featured Product List */}
+        <FeaturedProductList></FeaturedProductList>
       </div>
     </section>
   );

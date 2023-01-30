@@ -1,8 +1,9 @@
 import FeaturedProduct from "./FeaturedProduct";
 import featuredProductData from "../../data/FeaturedProductsData";
 
-const FeaturedProducts = () => {
+const FeaturedProductList = () => {
   return (
+    //List of Featured products fron Featured products data
     <div className="py-5">
       {featuredProductData.map((items) => (
         <FeaturedProduct
@@ -16,4 +17,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default FeaturedProductList;
